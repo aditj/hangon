@@ -3,13 +3,11 @@
     font-family: Nunito,sans-serif;
     color: #000000b8;
 }
-h1,span{
+h1,.logo{
     font-family: Sacramento,cursive;
     color: #000000ff;
 }
-span{
-    font-size: 2rem;
-}
+
 h1,h3,h5{
     margin: 0px;
 }
@@ -111,6 +109,7 @@ body{
     /* animate 5px left 5px down */
     transition: all 0.5s ease-in-out;
     transform: translate(5px,5px);
+    cursor: pointer;
 }
 .how{
     display: flex;
@@ -171,6 +170,7 @@ select{
     /* animate 5px left 5px down */
     transition: all 0.5s ease-in-out;
     transform: translate(5px,5px);
+    cursor: pointer;
 }
 .goback{
     font-size: 20px;
@@ -207,6 +207,10 @@ select{
     flex-direction: column;
     gap: 2px;
 }
-.how-step-left{
-    font-size: 20px;
+.how-step-left>*{
+    font-weight: 600;
 }
+.here{
+    color: blue;
+}
+

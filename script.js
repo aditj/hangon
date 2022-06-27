@@ -2,6 +2,9 @@ $(".cta").click(function() {
     $(".form-popup").css("display", "block");
     $(".body").css("filter","blur(4px)")
 });
+$('.here').click(function(){
+    $(".cta").click();
+})
 $(".goback").click(function() {
     $(".form-popup").css("display", "none");
     $(".body").css("filter","blur(0px)")
