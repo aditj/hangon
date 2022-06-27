@@ -7,10 +7,13 @@ h1,.logo{
     font-family: Sacramento,cursive;
     color: #000000ff;
 }
-
+h2{
+    font-size: 1.4em;
+}
 h1,h3,h5{
     margin: 0px;
 }
+
 .body{
     position: relative;
   min-height: 100vh;
@@ -19,6 +22,9 @@ h1,h3,h5{
 body{
     margin: 0;
     padding: 0;
+}
+.section-header{
+    margin-bottom: 10px;
 }
 .header{
     margin: 0 20px 0 20px;
@@ -46,8 +52,8 @@ body{
     margin: 0 20px 0 20px;
     margin-top: 50px;
     margin-bottom: 20px;
-    /* margin-bottom: 50px;
-    padding-bottom: 5.5rem;    Footer height */
+    margin-bottom: 50px;
+    padding-bottom: 5.5rem; 
 }
 .footer{
     
@@ -88,7 +94,7 @@ body{
     display: flex;
     align-items: center;
     gap: 10px;
-
+    margin-bottom: 5px;
 }
 .cta{
     padding: 17px;
@@ -115,7 +121,7 @@ body{
 .how{
     display: flex;
     flex-direction: column;
-    align-items: center;
+   
     gap: 2px;
 }
 .form-popup{
@@ -209,9 +215,12 @@ select{
     gap: 2px;
 }
 .how-step-left>*{
-    font-weight: 600;
+    font-weight: 700;
 }
 .here{
     color: blue;
 }
 
+img{
+    width: 30px;
+}
