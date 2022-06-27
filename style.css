@@ -45,8 +45,9 @@ body{
 .content{
     margin: 0 20px 0 20px;
     margin-top: 50px;
-    margin-bottom: 50px;
-    padding-bottom: 5.5rem;    /* Footer height */
+    margin-bottom: 20px;
+    /* margin-bottom: 50px;
+    padding-bottom: 5.5rem;    Footer height */
 }
 .footer{
     
@@ -195,7 +196,7 @@ select{
 .how-step{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:flex-start;
     align-items: flex-start;
     gap: 0px;
     margin-bottom: 20px;
