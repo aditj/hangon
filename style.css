@@ -20,14 +20,9 @@ h1,h3,h5{
   margin: 0px;
   
 }
-@media screen and (min-width: 768px){
-    .body{
-        width: 50%;
-        margin: auto;
-    }
-}
+
     
-}
+
 body{
     margin: 0;
     padding: 0;
@@ -229,7 +224,23 @@ select{
 .here{
     color: blue;
 }
-
+.here:hover{
+    cursor: pointer;
+}
+.goback:hover{
+    cursor: pointer;
+}
 img{
     width: 30px;
+}
+@media screen and (min-width: 768px){
+    .body{
+        width: 50%;
+        margin: auto;
+    }
+    .form-popup{
+        top: 5%;
+        width: 40%;
+        left: 25%;
+    }
 }

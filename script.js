@@ -1,6 +1,19 @@
 $(".cta").click(function() {
     $(".form-popup").css("display", "block");
-    $(".body").css("filter","blur(4px)")
+    $(".body").css("filter","blur(4px)");
+    $.ajax({
+        method: 'POST',
+        url: 'https://formsubmit.co/8335b3896acd5938113fa50f13c4fda6',
+        dataType: 'json',
+        accepts: 'application/json',
+        data: {"msg":"cta clicked!",'_captcha':false},
+        success: (data) => { console.log(data);
+            
+        },
+        error: (err) => console.log('error', err),
+        
+
+    });
 });
 $('.here').click(function(){
     $(".cta").click();
