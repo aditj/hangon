@@ -60,3 +60,7 @@ $(".submit").click(function() {
     }
     });
 });
+$("#society").selectize({
+    create: true,
+    sortField: "text",
+  });
