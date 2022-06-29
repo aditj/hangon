@@ -60,7 +60,11 @@ $(".submit").click(function() {
     }
     });
 });
-$("#society").selectize({
+var $select = $("#society").selectize({
     create: true,
     sortField: "text",
+    placeholder:"Search your society and Select",
+    allowEmptyOption:true,
+   
   });
+  $select[0].selectize.clear()
