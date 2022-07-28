@@ -1,6 +1,10 @@
 $(".cta").click(function() {
-    $(".form-popup").css("display", "block");
-    $(".body").css("filter","blur(4px)");
+    $(".form-popup").css("display", "flex");
+    $(".form-popup").css("opacity", "1");
+    $(".form-popup").css("flex-direction", "column");
+    $(".form-popup").css("justify-content", "space-around");
+    $(".cta-container").css("display", "none");
+    $(".content").css("display", "none");
     $.ajax({
         method: 'POST',
         url: 'https://formsubmit.co/8335b3896acd5938113fa50f13c4fda6',
@@ -15,12 +19,17 @@ $(".cta").click(function() {
 
     });
 });
-$('.here').click(function(){
+$('.cta-2').click(function(){
     $(".cta").click();
+    $("html, body").animate({ scrollTop: $(".header").offset().top }, 1000);
+
 })
 $(".goback").click(function() {
     $(".form-popup").css("display", "none");
-    $(".body").css("filter","blur(0px)")
+    $(".thanks-popup").css("display", "none");
+    $(".cta-container").css("display", "block");
+    $(".content").css("display", "block");
+    location.reload()
 })
 function getFormObj() {
     var formObj = {};
@@ -36,7 +45,7 @@ $(".submit").click(function() {
         return;
     }
     if(/\D/.test($("input[name='mobile']").val())){
-        alert("Please enter a valid mobile number");
+        alert("Please enter a valid 10 digit mobile number");
         return;
     }
     
@@ -48,14 +57,18 @@ $(".submit").click(function() {
         data: getFormObj(),
         success: (data) => { console.log(data);
             $(".form-popup").css("display", "none");
-            $(".body").css("filter","blur(0px)");
-            $(".thanks").css("display", "block");
+            
+            $(".thanks-popup").css("display", "flex");
+            $(".thanks-popup").css("flex-direction", "column");
+            $(".thanks-popup").css("justify-content", "space-around");
+            
         },
         error: (err) => {console.log('error', err);
         $(".form-popup").css("display", "none");
-            $(".body").css("filter","blur(0px)");
-            $(".thanks").show(20);
-            $(".thanks").hide(4000);
+        $(".thanks-popup").css("display", "flex");
+        $(".thanks-popup").css("flex-direction", "column");
+        $(".thanks-popup").css("justify-content", "space-around");
+
 
     }
     });
@@ -68,3 +81,8 @@ var $select = $("#society").selectize({
    
   });
   $select[0].selectize.clear()
+
+$(".know-more").click(function() {
+    console.log("clicked");
+    $("html, body").animate({ scrollTop: $(".cta").offset().top }, 1000);
+})
